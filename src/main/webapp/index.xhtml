@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+        <title>CRUD CON LISTAS</title>
+        <link rel="stylesheet" type="text/css" href="resources/css/estilo.css" />
+    </h:head>
+    <h:body>
+        <div align="center">
+        <marquee> CLASIFICACIÓN</marquee>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Id_clasificacion"/>
+                <h:inputText value="#{ClasificacionBean.clasi.id_clasificacion}" />
+                <h:outputLabel value="clasificacion"/>
+                <h:inputText value="#{ClasificacionBean.clasi.clasificacion}"/>        
+                <h:outputLabel value="descripcion"/>
+                <h:inputTextarea value="#{ClasificacionBean.clasi.descripcion}"/>
+                <h:outputLabel value="Agregar"/>
+                <h:commandButton   value="agregar" actionListener="#{ClasificacionBean.agregarClasificacion()}" />
+         
+            </h:panelGrid>
+                   
+          
+
+<h:dataTable value="#{ClasificacionBean.listPersona}" var="cl" rendered="#{ClasificacionBean.listPersona.size()>0 eq true}">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="id_clasificacion" />    
+                    </f:facet>
+                    <h:outputLabel  value="#{cl.id_clasificacion}" />
+
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="clasificacion" />    
+                    </f:facet>
+                    <h:outputLabel value="#{cl.clasificacion}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="descipcion" />    
+                    </f:facet>
+                    <h:outputLabel value="#{cl.descripcion}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="Acciones" />    
+                    </f:facet>
+                    <h:commandLink value="Eliminar" actionListener="#{ClasificacionBean.eliminarClasificacion(cl)}"/>
+                    <h:commandLink value="Modificar" actionListener="#{ClasificacionBean.eliminarClasificacion(cl)}"/>
+                </h:column>
+
+
+            </h:dataTable>
+
+        </h:form>
+
+
+</div>
+    </h:body>
+
+
+</html>
+

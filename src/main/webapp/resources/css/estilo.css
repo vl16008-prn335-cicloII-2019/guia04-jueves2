@@ -1,0 +1,87 @@
+
+
+body{
+    background: darkslategrey;
+}
+h1{
+    
+    font-family: fantasy;
+    font-size: 40px;
+    color: chartreuse
+}
+a{
+    text-decoration:none;
+    color: deepskyblue;
+}
+table{
+    align-self: center;
+    border-radius: 15px;
+}
+td{
+    font-family: fantasy;
+    text-align: center;
+    color: lime;
+    background: #0E1826;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+td:hover{
+    background: black;
+    
+    
+}
+th{
+    font-family: sans-serif;
+    text-align: center;
+    color: yellow;
+    background: #0E1826;;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+th:hover{
+    background: darkred;
+    color: white;
+    
+}
+
+input[type=text] {
+  border: 2px solid skyblue;
+  border-radius: 4px;
+  background-color: whitesmoke
+}
+input[type=email] {
+  border: 2px solid skyblue;
+  border-radius: 4px;
+  background-color: whitesmoke
+}
+input[type=number] {
+  border: 2px solid skyblue;
+  border-radius: 4px;
+  background-color: whitesmoke;
+      -moz-appearance:textfield;
+}
+input[type=submit] {
+    font-family: monospace;
+  border: 2px solid skyblue;
+  border-radius: 4px;
+  background-color: whitesmoke;
+      -moz-appearance:textfield;
+}
+input[type=reset] {
+    font-family: monospace;
+  border: 2px solid skyblue;
+  border-radius: 4px;
+  background-color: red;
+      -moz-appearance:textfield;
+}
+
+marquee{
+    font-family: fantasy;
+    font-size: 20px;
+    background-color: yellow;
+    color: #138496;
+    border-radius: 5px;
+    width: 50%;
+}
